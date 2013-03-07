@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Sweep or Die</title>
+    <link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="index.css" />
+    <link href='http://fonts.googleapis.com/css?family=Metal+Mania' rel='stylesheet' type='text/css'>
+  </head>
+  <body>
+    <div class="header">
+        <h1>Sweep or Die</h1>
+        <h2>In Search for Trouble</h2>
+        <div class="btn-align">
+          <div class="btn-group">
+            <button class="btn btn-large btn-inverse dropdown-toggle" data-toggle="dropdown"><i class="icon-th icon-white"></i> New Game</button>
+            <ul class="dropdown-menu">
+              <li><a class="preset-beginner" href="#beginner">Beginner <span class="muted">(8 x 8)</span></a></li>
+              <li><a class="preset-intermediate" href="#intermediate">Intermediate <span class="muted">(16 x 16)</span></a></li>
+              <li><a class="preset-expert" href="#expert">Expert <span class="muted">(24 x 32)</span></a></li>
+              <li class="divider"></li>
+              <li><a href="#custom" data-toggle="modal" data-target="#myModal">Custom</a></li>
+            </ul>
+          </div>
+          <div class="btn-group">
+            <button class="btn btn-large btn-inverse btn-validate"><i class="icon-check icon-white"></i> Validate</button>
+            <button class="btn btn-large btn-inverse btn-restart"><i class="icon-refresh icon-white"></i> Restart</button>
+            <button class="btn btn-large btn-inverse btn-cheat"><i class="icon-eye-open icon-white"></i> <span class="cheats-label">Cheats Off</span></button>
+          </div>
+        </div>
+        <div class="game-info">
+          <span class="badge badge-inverse">Size: <span class="board-height">8</span> x <span class="board-width">8</span></span>
+          <span class="badge badge-inverse">Mines: <span class="board-mines">10</span></span>
+          <span class="badge badge-inverse">Time: <span class="board-time">0.00</span></span>
+        </div>
+    </div>
+    
+    <div class="game-over">
+      <h3 class="game-over-won">Congratulations! You searched and avoided trouble.</h3>
+      <h3 class="game-over-fail">Game Over! You found trouble and got burnt. Poser.</h3>
+    </div>
+    
+    <div class="board-container">
+      <div class="board">
+        boom
+      </div>
+    </div>
+    
+    <div class="clearfix"></div>
+    
+    <!--new-modal-->
+    <div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+      <div class="modal-header">
+        <h3 id="myModalLabel">Custom Game</h3>
+      </div>
+      <div class="modal-body">
+        <form class="form-custom form-horizontal">
+          <div class="control-group">
+            <label class="control-label" for="inputEmail">Game Size</label>
+            <div class="controls">
+              <select name="height" class="span1">
+                <option>8</option><option>9</option><option>10</option><option>11</option>
+                <option>12</option><option>13</option><option>14</option><option>15</option>
+                <option>16</option><option>17</option><option>18</option><option>19</option>
+                <option>20</option><option>21</option><option>22</option><option>23</option>
+                <option>24</option><option>25</option><option>26</option><option>27</option>
+                <option>28</option><option>29</option><option>30</option><option>31</option>
+                <option>32</option>
+              </select>
+              x
+              <select name="width" class="span1">
+                <option>8</option><option>9</option><option>10</option><option>11</option>
+                <option>12</option><option>13</option><option>14</option><option>15</option>
+                <option>16</option><option>17</option><option>18</option><option>19</option>
+                <option>20</option><option>21</option><option>22</option><option>23</option>
+                <option>24</option><option>25</option><option>26</option><option>27</option>
+                <option>28</option><option>29</option><option>30</option><option>31</option>
+                <option>32</option>
+              </select>
+            </div>
+          </div>
+          
+          <div class="control-group">
+            <label class="control-label" for="inputEmail">Mine Count</label>
+            <div class="controls">
+              <input type="text" name="mines" value="10" class="span2" />
+              <span class="help muted">1 - 1/3 of tiles</span>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button class="btn pull-left" data-dismiss="modal" aria-hidden="true">Nevermind</button>
+        <button class="btn btn-success preset-custom">Start Game</button>
+      </div>
+    </div>
+    
+    <div class="footer">
+      <h4>Game Instructions</h4>
+      <p>
+        Open tiles by clicking on them. Right click tiles to flag and un-flag them as mines. If you mark a tile as a mine incorrectly, you will have to correct the mistake before you can win. When you're done, click validate to see if you avoided trouble. With cheats on, posers can hover over tiles to get hints.
+      </p>
+    </div>
+    <div class="feet">
+      <p>
+        Made using the force by <a target="_blank" href="https://twitter.com/jedireza">@jedireza</a> | 
+        See the source code on <a href="https://github.com/jedireza/sweep-or-die/">GitHub</a>
+      </p>
+      <p>
+        Learn about <a target="_blank" href="http://en.wikipedia.org/wiki/Minesweeper_(video_game)">Minesweeper</a> | 
+        Background by subtlepatterns.com
+      </p>
+    </div>
+    
+    <script type="text/javascript" src="vendor/jquery/jquery-1.8.2.min.js"></script>
+    <script type="text/javascript" src="vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="index.js"></script>
+  </body>
+</html>

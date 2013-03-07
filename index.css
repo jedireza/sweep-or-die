@@ -1,0 +1,121 @@
+body {
+  background: #383838;
+  background-image: url('bg-main.png');
+}
+
+a,
+a:visited,
+a:hover {
+  color: #ccc;
+}
+
+.header h1, .header h2, .header h3 {
+  text-shadow: #000000 2px 2px 5px;
+  text-align: center;
+  color: #fff;
+  font-family: 'Metal Mania', cursive;
+}
+.header h1 {
+  font-size: 90px;
+  margin-top: 40px;
+  margin-bottom: 25px;
+}
+.header h2 {
+  font-size: 40px;
+}
+.btn-align {
+  text-align: center;
+}
+.btn-group {
+  text-align: left;
+}
+
+.game-info {
+  zoom: 1.25;
+  text-align: center;
+  margin-top: 10px;
+}
+.game-info .badge {
+  background-color:rgba(0,0,0,0.5);
+}
+
+.game-over h3 {
+  display: none;
+  text-shadow: #000000 2px 2px 5px;
+  text-align: center;
+  font-family: 'Metal Mania', cursive;
+}
+.game-over h3.game-over-won {
+  color: #5eb1ff;
+}
+.game-over h3.game-over-fail {
+  color: #ff0000;
+}
+
+.board-container {
+  width: 200px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+}
+.board {
+  
+}
+.board .cell {
+  cursor: default;
+  color: transparent;
+  text-align: center;
+  height: 20px;
+  width: 20px;
+  float: left;
+  border-top: 2px solid #eee;
+  border-right: 2px solid #999;
+  border-bottom: 2px solid #999;
+  border-left: 2px solid #eee;
+  background-color: #ccc;
+}
+.board .cell-open {
+  color: inherit;
+  
+  border-top: 2px solid #ccc;
+  border-right: 1px solid #ababab;
+  border-bottom: 1px solid #ababab;
+  border-left: 2px solid #ccc;
+  background-color: #ccc;
+  
+  padding-right: 1px;
+  padding-bottom: 1px;
+}
+.board .cell-open i {
+  visibility: visible;
+}
+.board .cell-fail {
+  background-color: #ff0000;
+  border-top: 2px solid #ff0000;
+  border-left: 2px solid #ff0000;
+}
+
+.footer {
+  width: 500px;
+  margin: 20px auto;
+  padding: 20px;
+  text-align: center;
+  color: #ccc;
+  background-color:rgba(0,0,0,0.5);
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+}
+.footer h4 {
+  margin: 0px 0px 10px 0px;
+}
+.footer p {
+  margin: 0px;
+}
+.feet {
+  width: 500px;
+  margin: 0px auto 20px auto;
+  text-align: center;
+  color: #ccc;
+}
+
