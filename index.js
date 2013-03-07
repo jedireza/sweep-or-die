@@ -83,11 +83,8 @@ var game = {
       
       if (game.board[$(this).data('y')][$(this).data('x')].flag) {
         game.board[$(this).data('y')][$(this).data('x')].flag = false;
-        if (game.board[$(this).data('y')][$(this).data('x')].mine) {
-          //$(this).html('<i class="icon-fire"></i>');
-          $(this).html('');
-        }
-        else if (game.board[$(this).data('y')][$(this).data('x')].hint != 0) {
+        
+        if (game.board[$(this).data('y')][$(this).data('x')].hint != 0) {
           $(this).html(game.board[$(this).data('y')][$(this).data('x')].hint);
         }
         else {
@@ -151,7 +148,7 @@ var game = {
     }
   },
   resetTimer: function() {
-    clearInterval(game.timerInterval);
+    game.stopTimer();
     game.timeStarted = 0;
     game.updateTimer();
   },
@@ -252,7 +249,6 @@ var game = {
     for (var y = 0 ; y < this.height ; y++) {
       for (var x = 0 ; x < this.width ; x++) {
         if (this.board[y][x].open) {
-          game.board[y][x].open = true;
           $('[data-y="'+ y +'"][data-x="'+ x +'"]').addClass('cell-open');
         }
       }
