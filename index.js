@@ -13,6 +13,9 @@ var game = {
     this.flags = 0;
     $('.board').empty();
     
+    //reset timer
+    this.resetTimer();
+    
     //set width
     $('.board-container').css('width', 24 * this.width);
     
@@ -62,6 +65,12 @@ var game = {
           $('[data-y="'+ y +'"][data-x="'+ x +'"]').text(this.deadlyNeighbors(y, x));
         }
       }
+    }
+    
+    //should we show cheats?
+    if (this.showCheats) {
+      $('[rel="tooltip"]').tooltip('destroy');
+      $('[rel="tooltip"]').tooltip();
     }
     
     //setup contextmenu events
@@ -251,15 +260,9 @@ var game = {
   },
   controls: {
     restart: function(e) {
-      game.resetTimer();
       game.initialize();
-      if (game.showCheats) {
-        $('[rel="tooltip"]').tooltip();
-      }
     },
     validate: function(e) {
-      //TODO: if flag count is greater than mines,
-      
       var flagCount = 0;
       
       for (var y = 0 ; y < game.height ; y++) {
